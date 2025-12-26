@@ -1,16 +1,57 @@
-# React + Vite
+# YieldMaster PRO
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**YieldMaster PRO** is a professional-grade semiconductor yield simulation and analysis tool. It provides engineers and fab managers with interactive tools to model, visualize, and optimize wafer yield based on industry-standard statistical models.
 
-Currently, two official plugins are available:
+## Key Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 📊 Advanced Yield Modeling
+Simulate yield using three standard defect models:
+- **Poisson Model**: Best for random defect distributions.
+- **Murphy Model**: Accounts for varying defect densities across the wafer.
+- **Negative Binomial (NB) Model**: Ideal for clustering effects (using the $\alpha$ parameter).
 
-## React Compiler
+### 🧮 Interactive Simulator
+Real-time calculation of critical metrics:
+- **Yield Rate**: Percentage of functional dies.
+- **Gross Dies**: Total dies per wafer based on diameter (e.g., 300mm) and die area.
+- **Good Dies**: Estimated functional dies.
+- **Wafer Efficiency**: Ratio of total die area to wafer area.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🧪 Strategic Analysis
+- **Defect Density (D0)**: Adjustable defect density parameter ($/cm^2$).
+- **Cluster Factor ($\alpha$)**: Tune clustering severity for the Negative Binomial model.
+- **Die Area & Wafer Size**: Configurable physical parameters to simulate different product lines.
 
-## Expanding the ESLint configuration
+## Tech Stack
+- **Frontend**: React 19, Vite
+- **Styling**: Tailwind CSS
+- **Visualization**: HTML5 Canvas / Custom Components
+- **Icons**: Lucide React
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+### Installation
+1.  Clone the repository.
+2.  Install dependencies:
+    ```bash
+    npm install
+    ```
+
+### Development
+Start the local development server:
+```bash
+npm run dev
+```
+
+### Build for Production
+Create an optimized build for deployment:
+```bash
+npm run build
+```
+
+## Deployment
+This project is optimized for deployment on **Vercel**.
+1.  Import the repository.
+2.  Vercel will auto-detect the Vite framework.
+3.  Deploy.
+
