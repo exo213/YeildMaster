@@ -34,15 +34,12 @@ YieldMaster PRO is a high-fidelity semiconductor manufacturing yield simulator a
 - npm or yarn
 
 ### Installation
-1. Navigate to the frontend directory:
-   ```bash
-   cd frontend
-   ```
-2. Install dependencies:
+
+1. Install dependencies:
    ```bash
    npm install
    ```
-3. Start the development server:
+2. Start the development server:
    ```bash
    npm run dev
    ```
