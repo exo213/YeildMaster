@@ -1,57 +1,54 @@
 # YieldMaster PRO
 
-**YieldMaster PRO** is a professional-grade semiconductor yield simulation and analysis tool. It provides engineers and fab managers with interactive tools to model, visualize, and optimize wafer yield based on industry-standard statistical models.
+YieldMaster PRO is a high-fidelity semiconductor manufacturing yield simulator and economic analysis tool. It allows engineers and fab managers to model yield loss, visualize wafer maps, and analyze the economic impact of process variations.
 
-## Key Features
+## 🚀 Core Features
 
-### 📊 Advanced Yield Modeling
-Simulate yield using three standard defect models:
-- **Poisson Model**: Best for random defect distributions.
-- **Murphy Model**: Accounts for varying defect densities across the wafer.
-- **Negative Binomial (NB) Model**: Ideal for clustering effects (using the $\alpha$ parameter).
+- **Multi-Model Yield Calculation**: Supports Poisson, Murphy, and Negative Binomial (Clustering) models.
+- **Interactive Wafer Visualization**: Dynamic SVG-based wafer map showing die layout and estimated defect distribution.
+- **Economic Analysis**: Cost-per-good-die (CPGD) tracking and trend analysis.
+- **Repair & Redundancy Modeling**: Simulate the impact of chip repair strategies on effective yield.
 
-### 🧮 Interactive Simulator
-Real-time calculation of critical metrics:
-- **Yield Rate**: Percentage of functional dies.
-- **Gross Dies**: Total dies per wafer based on diameter (e.g., 300mm) and die area.
-- **Good Dies**: Estimated functional dies.
-- **Wafer Efficiency**: Ratio of total die area to wafer area.
+## 🔬 Industry-Standard Logic Upgrades
 
-### 🧪 Strategic Analysis
-- **Defect Density (D0)**: Adjustable defect density parameter ($/cm^2$).
-- **Cluster Factor ($\alpha$)**: Tune clustering severity for the Negative Binomial model.
-- **Die Area & Wafer Size**: Configurable physical parameters to simulate different product lines.
+### 1. Geometric Logic: Edge Exclusion
+- **Formula**: `Effective Diameter = Diameter - (2 × Edge Exclusion)`
+- Accounts for the "kill zone" at the wafer's edge caused by handling, clamping, and process non-uniformity.
 
-## Tech Stack
-- **Frontend**: React 19, Vite
-- **Styling**: Tailwind CSS
-- **Visualization**: HTML5 Canvas / Custom Components
-- **Icons**: Lucide React
+### 2. Defect Logic: Critical Area (Pattern Density)
+- **Concept**: Yield is calculated based on the *Critical Area* (`Die Area × Pattern Density`) rather than total area.
+- Recognizes that defects in "white space" do not cause electrical failure.
 
-## Getting Started
+### 3. Economic Logic: Fab Utilization
+- **Formula**: `Effective Wafer Cost = Base Wafer Cost / Utilization`
+- Models how low fab throughput increases the effective cost per wafer due to fixed-cost depreciation.
+
+### 4. Yield Model Selection: Systematic Yield Limiter
+- **Formula**: `Final Yield = Random Yield × Process Maturity`
+- Prevents unrealistic 100% yield scenarios by accounting for systematic limitations (litho focus, etch variation, etc.).
+
+## 🛠️ Getting Started
+
+### Prerequisites
+- Node.js (v18+)
+- npm or yarn
 
 ### Installation
-1.  Clone the repository.
-2.  Install dependencies:
-    ```bash
-    npm install
-    ```
+1. Navigate to the frontend directory:
+   ```bash
+   cd frontend
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-### Development
-Start the local development server:
-```bash
-npm run dev
-```
-
-### Build for Production
-Create an optimized build for deployment:
-```bash
-npm run build
-```
-
-## Deployment
-This project is optimized for deployment on **Vercel**.
-1.  Import the repository.
-2.  Vercel will auto-detect the Vite framework.
-3.  Deploy.
+## 🏗️ Tech Stack
+- **Frontend**: React, Vite, Tailwind CSS, Recharts, Lucide Icons
+- **Logic**: Custom JavaScript Math Engine
+- **Visualization**: D3-inspired SVG rendering
 
