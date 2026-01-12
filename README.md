@@ -9,7 +9,7 @@ YieldMaster PRO is a high-fidelity semiconductor manufacturing yield simulator a
 - **Economic Analysis**: Cost-per-good-die (CPGD) tracking and trend analysis.
 - **Repair & Redundancy Modeling**: Simulate the impact of chip repair strategies on effective yield.
 
-## 🔬 Industry-Standard Logic Upgrades
+## 🔬 Industry-Standard Features
 
 ### 1. Geometric Logic: Edge Exclusion
 - **Formula**: `Effective Diameter = Diameter - (2 × Edge Exclusion)`
